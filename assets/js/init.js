@@ -13,10 +13,10 @@
        $('#cookies').hide()
      }
 
-     jQuery('#cookies').on('click', function(event) {
-            localStorage.setItem('cookieconsent', 'true')
-            jQuery('#cookies').toggle('hide');
-       });
+    //  jQuery('#cookies').on('click', function(event) {
+    //         localStorage.setItem('cookieconsent', 'true')
+    //         jQuery('#cookies').toggle('hide');
+    //    });
 
    }); // end of document ready
  })(jQuery);

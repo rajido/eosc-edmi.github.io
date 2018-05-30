@@ -144,9 +144,9 @@ colored: colored # Leave blank for black and white icons
 
 project_button: Github
 
-github: https://github.com/jameshamann/jekyll-material-theme
+github: https://github.com/EOSC-EDMI
 medium: https://medium.com
-
+EOSC: https://eoscpilot.eu/
 baseurl: # if your site is located at /blog or /home, enter it here, otherwise leave it empty
 url: http://localhost:4000/ #the url of your site
 
@@ -168,3 +168,9 @@ plugins:
   - jekyll-feed
   - jekyll-assets
   - jekyll-minifier
+
+
+collections:
+  pages:
+    output: true
+    permalink: /:path
