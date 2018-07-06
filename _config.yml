@@ -174,3 +174,6 @@ collections:
   pages:
     output: true
     permalink: /:path
+  properties:
+    output: true
+    permalink: /:path
