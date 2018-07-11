@@ -5,10 +5,48 @@
 $base-font-size: 1em;
 $spacing-unit:     30px !default;
 
+// EOSC brand 
+$picton-blue: #40BBF7;
+$granite-grey: #666666;
+
+// Complementary colors
+$snow: #F9F9F9;
+$granny-smith-apple:#9EE493;
+$cadet-blue: #5C9EAD;
+$prussian-blue: #133C55;
+
+
+$palette-background: $snow;
+$palette-dark-background: #4F6D7A;
+$palette-primary: $picton-blue;
+$palette-secondary: $granite-grey;
+$palette-tertiary: $cadet-blue;
+
+$font-family-primary: 'Helvetica Neue', sans-serif;
+$font-family-secondary: 'Georgia', serif;
+
+$palettes: (
+    ligth: (
+        bg: $snow,
+        fg: $granite-grey,
+        primary: $picton-blue,
+        secondary: $granny-smith-apple,
+        tertiary: $prussian-blue,
+    ),
+    dark: (
+        bg: #000,
+        fg: #fff,
+        primary: #333,
+        secondary: #666,
+        tertiary: #888,
+    ),
+);
+
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
 
 @import "syntax-highlighting",
         "dataset",
-        "landing";
+        "landing",
+        "mixins";

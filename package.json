@@ -1,0 +1,33 @@
+{
+  "name": "eosc-edmi.github.io",
+  "version": "1.0.0",
+  "description": "EOSC Dataset minimum information website",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify index.js -o assets/js/bundle.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOSC-EDMI/eosc-edmi.github.io.git"
+  },
+  "keywords": [
+    "EOSC",
+    "EDMI"
+  ],
+  "author": "Ricardo Arcila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EOSC-EDMI/eosc-edmi.github.io/issues"
+  },
+  "homepage": "https://github.com/EOSC-EDMI/eosc-edmi.github.io#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
