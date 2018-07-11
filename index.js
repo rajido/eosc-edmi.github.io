@@ -37,12 +37,17 @@ function standardFiltering() {
         }
         // create a collection containing all of the filterable elements
         var filteredResults = $('#dataset .standard');
+        var notCheckedStandards = $('#dataset .standard');
 
         filteredResults = filteredResults.filter((pos, standard) => 
             selectedFilters.includes(standard.getAttribute('data-id')));
         
-        $('#dataset .standard').removeClass("visible").addClass("hidden");
-        $('#dataset .standard').filter(filteredResults).addClass("visible").removeClass("hidden");
+        notCheckedStandards = notCheckedStandards.filter((pos, standard) => $.inArray(standard, filteredResults) === -1);
+
+        notCheckedStandards.removeClass("visible").addClass("hidden");
+        $('#dataset .standard').filter(filteredResults).removeClass("hidden").addClass("visible");
         
+        console.log("not checked standards", notCheckedStandards);
+        console.log("filtered results", filteredResults);
     });
 };
