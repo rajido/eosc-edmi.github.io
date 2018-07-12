@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import "materialize-css";
+import listjs from "list.js"
 
 $(function () {
 
@@ -17,37 +18,87 @@ $(function () {
         $('#cookies').hide()
     }
 
-    standardFiltering();
+    if (document.getElementById("dataset-page")) {
+        datasetPageFiltering();
+    }
+
+    if (document.getElementById("properties-page")) {
+        propertiesPageFiltering();
+    }
 }); // end of document ready
 
-function standardFiltering() {
+function propertiesPageFiltering() {
+    let options = {
+        valueNames: ['name', 'functional', 'operational', 'marginality']
+    };
+
+    var propertyList = new listjs('properties-table', options);
+
+    $('#filter-minimum').click(function () {
+        propertyList.filter(function (item) {
+            if (item.values().marginality == "minimum") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+
+    $('#filter-recommended').click(function () {
+        propertyList.filter(function (item) {
+            if (item.values().marginality == "recommended") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+
+    $('#filter-optional').click(function () {
+        propertyList.filter(function (item) {
+            if (item.values().marginality == "optional") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });
+
+    $('#filter-none').click(function () {
+        propertyList.filter();
+        return false;
+    });
+
+}
+
+function datasetPageFiltering() {
 
     var filterCheckboxes = $('#standards-search input[type="checkbox"]');
     filterCheckboxes.on('change', function () {
-        
+
         var selectedFilters = [];
 
         filterCheckboxes.filter(':checked').each(function () {
             selectedFilters.push(this.value);
         });
-        console.log('selected filters', selectedFilters);
         if (selectedFilters.length <= 0) {
-            $('#dataset .standard').removeClass("hidden").addClass("visible");
+            $('#dataset-page .standard').removeClass("hidden").addClass("visible");
             return
         }
         // create a collection containing all of the filterable elements
-        var filteredResults = $('#dataset .standard');
-        var notCheckedStandards = $('#dataset .standard');
+        var filteredResults = $('#dataset-page .standard');
+        var notCheckedStandards = $('#dataset-page .standard');
 
-        filteredResults = filteredResults.filter((pos, standard) => 
+        filteredResults = filteredResults.filter((pos, standard) =>
             selectedFilters.includes(standard.getAttribute('data-id')));
-        
+
         notCheckedStandards = notCheckedStandards.filter((pos, standard) => $.inArray(standard, filteredResults) === -1);
 
         notCheckedStandards.removeClass("visible").addClass("hidden");
-        $('#dataset .standard').filter(filteredResults).removeClass("hidden").addClass("visible");
-        
-        console.log("not checked standards", notCheckedStandards);
-        console.log("filtered results", filteredResults);
+        $('#dataset-page .standard').filter(filteredResults).removeClass("hidden").addClass("visible");
+
     });
 };

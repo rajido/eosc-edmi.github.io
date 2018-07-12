@@ -221,26 +221,54 @@ properties:
 ---
 
 
-<h1 itemprop="name headline">EDMI metadata properties</h1>
+<div id="properties-page">
+    <h1 itemprop="name headline">EDMI metadata properties</h1>
+    
+    {% assign properties = page.properties %}
 
-{% assign properties = page.properties %}
-<table>
-<thead>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-        <th>Functional</th>
-        <th>Operational</th>
-        <th>Marginality</th>        
-    </tr>    
-</thead>
-{% for property in properties %}
-<tr>
-    <td>{{property.name}}</td>
-    <td>{{property.description}}</td>
-    <td>{{property.functional}}</td>
-    <td>{{property.operational}}</td>
-    <td>{{property.marginality}}</td>
-</tr>
-{% endfor %}
-</table>
+    <div id="properties-table">
+        <div class="controls">
+            <input class="search" placeholder="Search..." />
+            <div class="filter">
+                <a class="btn waves-effect waves-light" id="filter-none">Show all</a>
+                <a class="btn waves-effect waves-light" id="filter-minimum">Minimum</a>
+                <a class="btn waves-effect waves-light" id="filter-recommended">Recommended</a>
+                <a class="btn waves-effect waves-light" id="filter-optional">Optional</a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Functional</th>
+                    <th>Operational</th>
+                    <th>Marginality</th>        
+                </tr>    
+            </thead>
+            <tbody class="list">
+                {% for property in properties %}
+                <tr>
+                    <td class="name"><strong>{{property.name}}</strong></td>
+                    <td>{{property.description}}</td>
+                    <td>
+                        {% if property.functional %}
+                        <i class="mdi mdi-checkbox-marked-outline mdi-24px blue-check-box"></i>
+                        {% else %}
+                        <i class="mdi mdi-checkbox-blank-outline mdi-24px"></i>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if property.operational %}
+                        <i class="mdi mdi-checkbox-marked-outline mdi-24px blue-check-box"></i>
+                        {% else %}
+                        <i class="mdi mdi-checkbox-blank-outline mdi-24px"></i>
+                        {% endif %}
+                    </td>
+                    <td class="marginality">{{property.marginality}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
