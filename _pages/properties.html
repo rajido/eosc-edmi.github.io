@@ -8,48 +8,55 @@ properties:
     functional: true
     operational: false
     guideline: ""
+    url: ""
 -
     name: description
     description: 'A short summary describing a dataset'
     marginality: minimum
     functional: true
     operational: false
-    guideline: ""
+    guideline: Description
+    url: 'https://docs.google.com/document/d/1ZxkUCLubazoEAslso5dR142oZ_ultvcBCZ5Y8b_Yp-I/edit?usp=sharing'
 -
     name: identifier
     description: 'The identifier property represents any kind of identifier for any kind of dataset'
     marginality: minimum
     functional: true
     operational: false
-    guideline: ""
+    guideline: 'Unique Identifier'
+    url: 'https://docs.google.com/document/d/1KO2HBeQq-BcMgtwKDxFQfRKI1R8V-m4TRkTl_YEW5nw/edit?usp=sharing'
 -
     name: url
     description: 'The location of a page describing the dataset'
     marginality: minimum
     functional: true
     operational: true
-    guideline: ""
+    guideline: 'Location (URL)'
+    url: 'https://docs.google.com/document/d/1wcLJ43G0MMvJCOXyrud5ChgsmvHdG4veWJjJZZt3dSk/edit?usp=sharing'
 -
     name: creator
     description: 'The creator/author of this dataset'
     marginality: minimum
     functional: true
     operational: true
-    guideline: ""
+    guideline: Originator
+    url: 'https://docs.google.com/document/d/1vpvYTt4r4ijprvOx67ejpnJgaOuP-xhIkhhnyxS_nCI/edit?usp=sharing'
 -
     name: dateCreated
     description: 'The date on which the dataset was created'
     marginality: minimum
     functional: true
     operational: true
-    guideline: ""
+    guideline: 'Temporal coordinates'
+    url: 'https://docs.google.com/document/d/1KB-scjM7sik59TEty_NyPjGOtf5gXSecOwXJlijWxF8/edit?usp=sharing'
 -
     name: license
     description: 'A license under which the dataset is distributed'
     marginality: minimum
     functional: true
     operational: true
-    guideline: ""
+    guideline: Availability
+    url: 'https://docs.google.com/document/d/1X40HaojHiF6e928V2nsVDKXcCeNOYIW4Mgvsq_7fD4I/edit?usp=sharing'
 -
     name: dataStandard
     description: 'The standard in which the content of the dataset is represented'
@@ -57,6 +64,7 @@ properties:
     functional: true
     operational: true
     guideline: ""
+    url: ""
 -
     name: dateModified
     description: 'The date on which the dataset was most recently modified'
@@ -64,13 +72,15 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: structure
     description: 'The description of the structure of the dataset'
     marginality: minimum
     functional: false
     operational: true
-    guideline: ""
+    guideline: Schema
+    url: 'https://docs.google.com/document/d/1ewcWDIJQTWglXGySv28ORMgqrurdQsD9_pDzn8ec7uc/edit?usp=sharing'
 -
     name: accessUrl
     description: 'The link to download the dataset'
@@ -78,6 +88,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: accessInterface
     description: 'The type of interface to present the dataset'
@@ -85,6 +96,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: includedeIn
     description: 'A dataset or data catalog which contains the dataset'
@@ -92,6 +104,7 @@ properties:
     functional: true
     operational: true
     guideline: ""
+    url: ""
 -
     name: measurementTechnique
     description: 'A technique or technology used in a dataset corresponding to the method used for measuring the corresponding variables'
@@ -99,13 +112,15 @@ properties:
     functional: true
     operational: false
     guideline: ""
+    url: ""
 -
     name: keywords
     description: 'Keywords or tags used to describe the dataset'
     marginality: recommended
     functional: true
     operational: false
-    guideline: ""
+    guideline: Keywords
+    url: 'https://docs.google.com/document/d/10Yy-FcUHzDma-2-6gM2lE6f1EMgeW2N8iFL8-jFNttg/edit?usp=sharing'
 -
     name: variablesMeasured
     description: 'The variables that are measured in the dataset'
@@ -113,13 +128,15 @@ properties:
     functional: true
     operational: false
     guideline: ""
+    url: ""
 -
     name: format
     description: 'The format in which the content of the dataset is encoded to present the information, typically a MIME format'
     marginality: recommended
     functional: false
     operational: true
-    guideline: ""
+    guideline: 'Medium / Format'
+    url: 'https://docs.google.com/document/d/1cd8cxKKgksdqaftPym24SmwOx7IxQdNebGiHQSCXT0M/edit?usp=sharing'
 -
     name: scientificType
     description: 'Scientific domain or type of the information provided in the datataset'
@@ -127,6 +144,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: includes
     description: 'A dataset or data catalog contained in the dataset'
@@ -134,6 +152,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: contentType
     description: 'Type of content provided in the dataset based on its origin and type of processes (raw, processed, summarised)'
@@ -141,6 +160,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: size
     description: 'Size of the dataset using a digital information multiple unit byte siymbol (MB, GB, PT, ...)'
@@ -148,6 +168,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: authentications
     description: 'Type of authentication required to access the dataset'
@@ -155,6 +176,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: version
     description: 'The version of the dataset'
@@ -162,6 +184,7 @@ properties:
     functional: true
     operational: true
     guideline: ""
+    url: ""
 -
     name: metric
     description: 'Metric to provide some quantitative or qualitative information about the dataset'
@@ -169,6 +192,7 @@ properties:
     functional: true
     operational: true
     guideline: ""
+    url: ""
 -
     name: sameAs
     description: 'Other URLs that can be used to access the dataset page'
@@ -176,13 +200,15 @@ properties:
     functional: true
     operational: false
     guideline: ""
+    url: ""
 -
     name: spatialCoverage
     description: 'The location depicted or described in the content'
     marginality: optional
     functional: true
     operational: false
-    guideline: ""
+    guideline: 'Spatial coordinates'
+    url: 'https://docs.google.com/document/d/124gKNFNvli_iv0UxJ-J8nasMXbwRgTTNoY5afpNXvBM/edit?usp=sharing'
 -
     name: temporalCoverage
     description: 'The property indicates the period that the content applies to'
@@ -190,20 +216,23 @@ properties:
     functional: true
     operational: false
     guideline: ""
+    url: ""
 -
     name: citation
     description: 'A citation or reference to another work that describes the dataset'
     marginality: optional
     functional: true
     operational: false
-    guideline: ""
+    guideline: Citations
+    url: 'https://docs.google.com/document/d/1P6g-8f8DMmPsm4jCXag9Sa-Utydg8hln6dWUvgCLHGs/edit?usp=sharing'
 -
     name: referenceCitation
     description: 'A citation or reference to that describes the dataset'
     marginality: optional
     functional: false
     operational: true
-    guideline: ""
+    guideline: 'Related publications'
+    url: 'https://docs.google.com/document/d/1r8VMdMY8cHsBdjTHVAz7kK87IFh6auEF-UL6JMHFlEA/edit?usp=sharing'
 -
     name: compression
     description: 'Type of compression used in the dadataset'
@@ -211,6 +240,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 -
     name: authorisations
     description: 'Type of authorisation required to access the dataset'
@@ -218,6 +248,7 @@ properties:
     functional: false
     operational: true
     guideline: ""
+    url: ""
 ---
 
 
@@ -243,8 +274,9 @@ properties:
                     <th>Description</th>
                     <th>Functional</th>
                     <th>Operational</th>
-                    <th>Marginality</th>        
-                </tr>    
+                    <th>Marginality</th>
+                    <th>RDA Metadata guideline</th>
+                </tr>
             </thead>
             <tbody class="list">
                 {% for property in properties %}
@@ -266,6 +298,13 @@ properties:
                         {% endif %}
                     </td>
                     <td class="marginality">{{property.marginality}}</td>
+                    <td class="guideline">
+                        {% if property.guideline != "" %}
+                        <a href="{{property.url}}">{{property.guideline}}</a>
+                        {% else %}
+                        <span class="no-guideline">No guideline yet</span> <i class="mdi mdi-link-off mdi-16px"></i>
+                        {% endif %}
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

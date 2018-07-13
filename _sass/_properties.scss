@@ -1,22 +1,46 @@
 #properties-page {
-    .blue-check-box {
-        color: palette(light, primary);
+
+    #properties-table {
+        overflow: auto;
+    }
+
+    .list {
+
+        .guideline {
+            position: relative;
+
+            .no-guideline {
+                font-size: 0.85em;
+                white-space: nowrap;
+            }
+
+            i {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+            }
+        }
+
+        .blue-check-box {
+            color: palette(light, primary);
+        }
     }
 
     .controls {
         margin: 2em 0 2em 0;
-        float: right;
         display: flex;
         flex-direction: column;
         .filter {
             display: flex;
             .btn {
+                background-color: palette(light, fg);
+                color: palette(light, bg);
                 text-transform: initial;
                 font-size: 0.8em;
                 margin: 0 1em 0 0;
                 height: 24px;
                 line-height: 24px;
-                padding: 0 0.5rem;                
+                padding: 0 0.2rem;                
             }
         }
     }
