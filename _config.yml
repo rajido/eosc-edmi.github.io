@@ -1,5 +1,5 @@
 title: EOSC - EDMI
-name: Elixir HUB
+name: EOSC Pilot
 email: arcila@ebi.ac.uk
 description: Minimum and common metadata is useful for data discovery and access, but it is essential that data is described beyond the minimum metadata, through the use of rich and domain specific metadata formats and guidelines.
 
@@ -26,9 +26,14 @@ project_three_url: https://github.com/jameshamann/jekyll-material-theme
 project_three_icon: hotel
 
 
-project_four: Fourth Project
-project_four_description: Describe your project!
-project_four_url: https://github.com/jameshamann/jekyll-material-theme
+project_four: Findability and Interoperability
+project_four_description: -|
+  `EOSCpilot has produced a first draft of the strategy and recommendations to help users and services to find and access datasets across several scientific disciplines. This strategy relies on three main ideas
+
+  - Agreeing on a common and minimum dataset metadata properties to be exposed by data resources (following evaluation of existing metadata models and APIs).
+  - Supporting a coordinated ecosystem of dataset metadata catalogues working together to efficiently manage and exchange their metadata.
+  - Demonstrate the applicability of these recommendations by implementing them in real use cases to allow users services to find and access data.`
+project_four_url: https://eoscpilot.eu/themes/wp6-interoperability/1st-report-on-data-report-findability-interoperability
 project_four_icon: restaurant
 
 portfolio_heading: Portfolio
