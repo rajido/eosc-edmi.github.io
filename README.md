@@ -1,6 +1,6 @@
 # EOSC - EDMI
 
-Minimum and common metadata is useful for data discovery and access, but it is essential that data is described beyond the minimum metadata, through the use of rich and domain specific metadata formats and guidelines.
+A minimum information metadata guideline to help users and services to find and access datasets reusing existing data models and interfaces.
 
 ## Development
 
